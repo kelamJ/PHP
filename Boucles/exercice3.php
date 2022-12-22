@@ -1,17 +1,24 @@
-<?php
-function table($nbr, $nbr2)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <?php for($row=0;$row<=12;$row++)
+        { ?>
+        <tr>
+        <?php for($col=0;$col<=12;$col++)
         {
-            $table = '<table border="1">';
-            for ($a=0; $a <= $nbr; $a++) {
-                $table .= '<tr>';
-                for ($b=-0; $b <= $nbr2 ; $b++) {
-                    $table .= '<td>'.$a*$b.'</td>';
-                }
-                $table .= '</tr>';
-            }
-            $table .= '</table>';
-            return $table;
-        }
-
-        echo table(12, 12);
-?>
+            $result=$row*$col;
+            ?>
+        <td><?php echo $result ?></td>
+        <?php } ?>
+        </tr>
+        <?php } ?>
+    </table>
+</body>
+</html>
