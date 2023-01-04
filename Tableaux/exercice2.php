@@ -72,7 +72,7 @@ $ourArray[3] = "ddd";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercice 2</title>
 </head>
 <body>
 <table>
@@ -80,13 +80,13 @@ $ourArray[3] = "ddd";
 <?php
 // Partie 1
 
-// asort($capitales);
-// foreach ($capitales as $villes => $pays) {
-//     echo '<tr>
-//     <td>' . $villes . '</td>
-//     <td>' . $pays . '</td>
-//     </tr>'; 
-// }
+asort($capitales);
+foreach ($capitales as $villes => $pays) {
+    echo '<tr>
+    <td>' . $villes . '</td>
+    <td>' . $pays . '</td>
+    </tr>'; 
+}
 
 // Partie 2
 
@@ -114,7 +114,6 @@ $ourArray[3] = "ddd";
 </pre>
 
 </table>
-
 
 </body>
 </html>
