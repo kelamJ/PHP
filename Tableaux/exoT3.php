@@ -21,10 +21,10 @@ $departements = array(
 <?php
 // Partie 1
 
-// asort($departements);
-// print_r($departements);
-// $nb = count($departements);
-// echo $nb;
+asort($departements);
+print_r($departements);
+$nb = count($departements);
+echo $nb;
 
 // Partie 2
 // print_r($region1);
