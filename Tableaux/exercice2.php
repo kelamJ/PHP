@@ -60,6 +60,11 @@ $capitales = array(
     "Vilnius" => "Lituanie",
     "Zagreb" => "Croatie"
 );
+$ourArray[0] = "a";
+$ourArray[1] = "bb";
+$ourArray[2] = "c";
+$ourArray[3] = "ddd";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,7 +76,7 @@ $capitales = array(
 </head>
 <body>
 <table>
-
+<pre>
 <?php
 // Partie 1
 
@@ -100,35 +105,13 @@ $capitales = array(
 // }
 
 // Partie 4
+// $newArr = array_filter($capitales, function($value) {
+//     return !in_array($value, ['Belgique', 'Roumanie','Irak','Mali','Allemagne','Colombie','Brésil','Slovaquie','Hongrie']);
+// });
+// var_dump($newArr);
 
-// unset($capitales["B"]);
-// asort($capitales);
-// foreach ($capitales as $pays => $villes) {
-//     echo '<tr>
-//         <td>' . $pays . '</td>
-//         <td>' . $villes . '</td>
-//         </tr>';
-// }
-$prenom = 'julien';
-echo $prenom[0]
-
-// foreach ($capitales as $pays => $villes) {
-//     echo '<tr>
-//         <td>' . $pays . '</td>
-//         <td>' . $villes . '</td>
-//         </tr>';
-
-//         $element = 'Bucarest';
-// unset($capitales[array_search($element, $capitales)]);
-
-
-
-
-// foreach ($capitales as $Berlin) {
-//     echo $Berlin . "<br>";
-// }
 ?> 
-
+</pre>
 
 </table>
 
