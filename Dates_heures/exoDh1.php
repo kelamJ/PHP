@@ -46,3 +46,30 @@ setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
             }
 
 ?>
+
+<!-- Exercice 4 -->
+
+<?php 
+echo '<br>';
+echo date("H:i");
+?>
+
+<!-- Exercice 5 -->
+
+<?php
+echo '<br>';
+$date = new DateTime();
+                        // P1M  signifie que + 1 pour les mois
+$date->add(new DateInterval('P1M'));
+echo $date->format('Y-m-d') . "\n";
+?>
+
+<!-- Exercice 6 -->
+
+<?php
+echo '<br>';
+// Attentat des tours jumelles USA
+$timestamp = 1000200000;
+$format = "l d M Y à H:i:s";
+echo date($format, $timestamp);
+?>
