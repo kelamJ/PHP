@@ -1,3 +1,20 @@
+<?php
+    /* Récupère la société et la personne a contacter automatiquement */
+if ($_GET) {
+    $text = $_GET["area"];
+    echo "Le formulaire nous donne " . "<br>" .
+        " " . $_REQUEST['societe'] . "<br>" .
+        " " . $_REQUEST['contact'] . "<br>" .
+        " " . $_REQUEST['area'] . "<br>" .
+        " " . $_REQUEST['codep'] . "<br>" .
+        " " . $_REQUEST['ville'] . "<br>" .
+        " " . $_REQUEST['email'] . "<br>" .
+        " " . $_REQUEST['tel'] . "<br>" .
+        " " . $_REQUEST['select'] . "<br>";
+}
+;
+?>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +25,7 @@
 <body>
     <section>
         <p id="oblig">*Ces zones sont obligatoires pour envoyer le formulaire.</p>
-        <form action="monscript.php" id="form" method="post">
+        <form action="exoF.php" id="form" method="GET">
         <label for="societe" id="societe">Société :</label> <input required type="text" name="societe">
         <br>
         <label for="contact" id="contact">Personne à contacter :</label> <input required type="text" name="contact">
