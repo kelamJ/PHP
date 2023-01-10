@@ -1,7 +1,7 @@
 <?php
     /* Récupère la société et la personne a contacter automatiquement */
-if ($_GET) {
-    $text = $_GET["area"];
+if ($_POST) {
+    $text = $_POST["area"];
     echo "Le formulaire nous donne " . "<br>" .
         " " . $_REQUEST['societe'] . "<br>" .
         " " . $_REQUEST['contact'] . "<br>" .
@@ -12,7 +12,8 @@ if ($_GET) {
         " " . $_REQUEST['tel'] . "<br>" .
         " " . $_REQUEST['select'] . "<br>";
 }
-;
+var_dump($_FILES);
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,18 +26,18 @@ if ($_GET) {
 <body>
     <section>
         <p id="oblig">*Ces zones sont obligatoires pour envoyer le formulaire.</p>
-        <form action="exoF.php" id="form" method="GET">
-        <label for="societe" id="societe">Société :</label> <input required type="text" name="societe">
+        <form action="exoF.php" id="form" method="post" enctype="multipart/form-data">
+        <label for="societe" id="societe">Société :</label> <input  type="text" name="societe">
         <br>
-        <label for="contact" id="contact">Personne à contacter :</label> <input required type="text" name="contact">
+        <label for="contact" id="contact">Personne à contacter :</label> <input  type="text" name="contact">
         <br>
         <label for="area" id="adress1">Adresse de l'entreprise :</label> <textarea name="area" id="area1" cols="15" rows="3"></textarea>
         <br>
-        <label for="codep" id="codep">Code Postal :</label> <input required type="number" name="codep">
+        <label for="codep" id="codep">Code Postal :</label> <input  type="number" name="codep">
         <br>
-        <label for="ville" id="ville">Ville :</label> <input required type="text" name="ville">
+        <label for="ville" id="ville">Ville :</label> <input  type="text" name="ville">
         <br>
-        <label for="email" id="email">E-mail :</label> <input required type="email" name="email">
+        <label for="email" id="email">E-mail :</label> <input  type="email" name="email">
         <br>
         <label for="tel" id="tel">Téléphone :</label> <input  type="tel" name="tel">
         <br>
@@ -59,6 +60,8 @@ if ($_GET) {
         
             <textarea name="adress1" id="area2" cols="15" rows="3"></textarea>
         </select>
+        <br>
+        <input type="file" name="fichier"> 
         <br>
         <input name="envoyer" value="Envoyer" type="submit" id="envoyer">
         <input name="effacer" value="Effacer" type="reset" id="effacer">
