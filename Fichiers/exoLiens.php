@@ -1,17 +1,13 @@
 <?php
-// $fichier = fopen("liens.txt");
-// include("liens.txt");
-$liens = file("liens.txt");
-echo "<ul>";
-foreach ($liens as $lien)
+$file = file('liens.txt');
+
+echo '<table>';
+foreach ($file as $line) 
 {
-    $lien = trim($liens);
-    $partie = explode(' ', $lien);
-    $url = $partie[0];
-    $titre = $partie[1];
+$data = str_getcsv($line);
+echo '<tr><td>' . implode('</td><td>', $data) . '</td></tr>';
 }
-echo "<li> <a> href=" . $url . " . $titre . </a> </li>";
-echo "</ul>";
+echo '</table>';
 ?>
 
 <!DOCTYPE html>
