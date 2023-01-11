@@ -12,8 +12,26 @@ if ($_POST) {
         " " . $_REQUEST['tel'] . "<br>" .
         " " . $_REQUEST['select'] . "<br>";
 }
-var_dump($_FILES);
+    $tmpName = "";
+    $name = "";
+if(isset($_FILES['file'])){
+    $tmpName = $_FILES['file']['tmp_name'];
+    $name = $_FILES['file']['name'];
+    $size = $_FILES['file']['size'];
+    $error = $_FILES['file']['error'];
+}
+move_uploaded_file($tmpName,'./upload/'.$name);
 
+$tabExtension = explode('.', $name);
+$extension = strtolower(end($tabExtension));
+$extensions = ['jpg', 'png', 'jpeg', 'gif'];
+
+if(in_array($extension, $extensions)){
+    move_uploaded_file($tmpName,'./upload/'.$name);
+}
+else{
+    echo "Mauvaise extension";
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -61,7 +79,10 @@ var_dump($_FILES);
             <textarea name="adress1" id="area2" cols="15" rows="3"></textarea>
         </select>
         <br>
-        <input type="file" name="fichier"> 
+        <input type="file" name="file">
+        <?php 
+
+        ?>
         <br>
         <input name="envoyer" value="Envoyer" type="submit" id="envoyer">
         <input name="effacer" value="Effacer" type="reset" id="effacer">

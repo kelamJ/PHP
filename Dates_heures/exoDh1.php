@@ -21,7 +21,7 @@ echo $diff . "<br>";
 
 <?php
 
-$année = 2024;
+$année = 2020;
 if ((0 == $année % 4) & (0 != $année % 100) |(0 == $année % 400))
 {
     echo "$année est une année bissextile";
@@ -38,7 +38,7 @@ else
 echo '<br>';
 setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
             
-            if(checkdate(32,17,2019)){
+            if(checkdate(17,32,2019)){
                 echo " La date est valide";
             }
             else {
